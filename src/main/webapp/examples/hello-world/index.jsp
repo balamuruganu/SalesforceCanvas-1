@@ -39,6 +39,10 @@
             // Not in Iframe
             alert("This canvas app must be included within an iframe");
         }
+		else{
+			var sr1 = '<%=signedRequestJson%>';
+			alert(sr1);
+		}
         Sfdc.canvas(function() {
 		 var sr = JSON.parse('<%=signedRequestJson%>');
               var sr1 = '<%=signedRequestJson%>';
