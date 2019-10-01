@@ -41,7 +41,7 @@
         }
 		else{
 			var sr1 = '<%=signedRequestJson%>';
-			alert(sr1);
+			console.log(sr1);
 		}
         Sfdc.canvas(function() {
 		 var sr = JSON.parse('<%=signedRequestJson%>');
