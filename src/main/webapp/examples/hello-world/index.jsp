@@ -32,6 +32,7 @@
     <br/>
 	
     <h1>Hello   <span id='username'></span></h1>
+	<h1>Hello   <span id='username1'></span></h1>
 	
 	<script>
         if (self === top) {
@@ -40,9 +41,12 @@
         }
         Sfdc.canvas(function() {
 		 var sr = JSON.parse('<%=signedRequestJson%>');
+              var sr1 = '<%=signedRequestJson%>';
             // Save the token
          Sfdc.canvas.oauth.token(sr.oauthToken);
          Sfdc.canvas.byId('username').innerHTML = sr.context.user.fullName;
+		Sfdc.canvas.byId('username1').innerHTML = sr1;
+		
 	    });
     </script>
 </body>
